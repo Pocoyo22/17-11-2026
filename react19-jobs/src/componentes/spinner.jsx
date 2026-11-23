@@ -3,7 +3,7 @@ const override ={
     display: "block",
     margin: "100px auto"
 }
-const spinner = ({cargando}) => {
+const Spinner = ({cargando}) => {
   return (
     <ClipLoader
     color= "#4338ca"
@@ -14,4 +14,4 @@ const spinner = ({cargando}) => {
   )
 }
 
-export default spinner
+export default Spinner
