@@ -9,13 +9,13 @@ const [cargando, setCargando] = useState(true)
 
 useEffect( () => {
   const apiUrl = isHome
-  ? '/api/jobs?_page=1&_per_page=6'
-  : '/api/jobs?_page=1&_per_page=20'
+  ? '/api/jobs?_page=1&_limit=6'
+  : '/api/jobs?_page=1&_limit=20'
   const fetchJobs = async () => {
     try {
       const resultado = await fetch(apiUrl)
       const data = await resultado.json()
-      setJobs(data.data)
+      setJobs(data)
     } catch (error) {
       console.log("Error trayendo los datos",error)
     }finally{
